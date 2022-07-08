@@ -3,11 +3,22 @@
   <head>
     <meta charset="utf-8"/>
     <title>Bato-Bato Pik!</title>
-    <script type="text/javascript" src="script_rps.js"></script>  
+    
   </head>
 
   <body>
-
+    
+    <button onclick="playerRock()">Rock</button>
+    <button onclick="playerPaper()">Paper</button>
+    <button onclick="playerScissors()">Scissors</button>
+    <button onclick="go()">GO!</button>
+    <p>Player selected: </p>
+    <p id="myInput" type="text"></p>
+    
+    <p id="computer"></p>
+    
+    <p id="result"></p>
+    <script type="text/javascript" src="script_rps.js"></script>  
   </body>
   
 
