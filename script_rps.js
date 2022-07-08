@@ -1,4 +1,7 @@
-//for (i=0;i<10;i++){
+alert("Playing RPS!!!");
+for (i=0;i<5;i++){
+    var playerScore=0;
+    var computerScore=0;
 function computerPlay(){
     const rps = ["Rock", "Paper", "Scissors"];
     let random = Math.floor(Math.random() * rps.length);
@@ -6,17 +9,17 @@ function computerPlay(){
     return rps[random];
 }
 function playerRock(){
-    document.getElementById("myInput").innerHTML = "Rock";
+    document.getElementById("myInput").value = "Rock";
 }
 function playerPaper(){
-    document.getElementById("myInput").innerHTML = "Paper";
+    document.getElementById("myInput").value = "Paper";
 }
 function playerScissors(){
-    document.getElementById("myInput").innerHTML = "Scissors";
+    document.getElementById("myInput").value = "Scissors";
 }
 
 function play(playerSelection, computerSelection){
-    document.getElementById("computer").innerHTML = "Computer selected: "+computer;
+    
     if (playerSelection==computerSelection){
         document.getElementById("result").innerHTML ="Draw!!!";
     }
@@ -42,25 +45,21 @@ function play(playerSelection, computerSelection){
         document.getElementById("result").innerHTML = "Player Wins! Rock beats Scissors.";
     }
     else{
-        alert("You havent selected anything!");
+        
     }
    
 }
-let player;
-
-let computer=computerPlay();
 
 function go(){
-    player=document.getElementById("myInput").value;
+    let player=document.getElementById("myInput").value;
+    let computer=computerPlay();
     console.log("player is "+player);
-    let playerInput=player;
     
-    console.log(playerInput);
     play(player,computer);
-    
-    console.log(computer);
+    document.getElementById("computer").innerHTML = "Computer selected: "+computer;
+    console.log("Computer is "+computer);
 }
 
 
 
-//}
+}
