@@ -66,13 +66,13 @@ function go(){
     console.log("Computer is "+computer);
 
     
-    if (playerScore==3){
-        document.getElementById("winner").innerHTML = "Winner is Player";
+    if (playerScore==2){
+        document.getElementById("winner").innerHTML = "WOWOWOWOW nanalo sa computer haha edi ikaw na magaling at well educated";
         playerScore=0;
         computerScore=0;
     }
-    if (computerScore==3){
-        document.getElementById("winner").innerHTML = "Winner is Computer";
+    if (computerScore==2){
+        document.getElementById("winner").innerHTML = "Natalo ka ng computer wtf? what a fucking noob";
         playerScore=0;
         computerScore=0;
     }else{document.getElementById("winner").innerHTML = "";}
