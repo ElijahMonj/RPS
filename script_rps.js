@@ -1,5 +1,5 @@
 alert("Playing RPS!!!");
-for (i=0;i<5;i++){
+    
     var playerScore=0;
     var computerScore=0;
 function computerPlay(){
@@ -26,23 +26,29 @@ function play(playerSelection, computerSelection){
     //draw
     if ((playerSelection=="Paper") && (computerSelection=="Rock")){
         document.getElementById("result").innerHTML ="Player Wins! Paper beats Rock.";
+        playerScore++;
     }
     if ((playerSelection=="Rock") && (computerSelection=="Paper")){
         document.getElementById("result").innerHTML ="Computer Wins! Paper beats Rock.";
+        computerScore++;
     }
     //rock vs paper
     if ((playerSelection=="Rock") && (computerSelection=="Scissors")){
         document.getElementById("result").innerHTML ="Player Wins! Rock beats Scissors.";
+        playerScore++;
     }
     if ((playerSelection=="Scissors") && (computerSelection=="Rock")){
         document.getElementById("result").innerHTML ="Computer Wins! Rock beats Scissors.";
+        computerScore++;
     }
     //rock vs Scissors
     if ((playerSelection=="Paper") && (computerSelection=="Scissors")){
         document.getElementById("result").innerHTML ="Computer Wins! Scissors beats Paper.";
+        computerScore++;
     }
     if ((playerSelection=="Scissors") && (computerSelection=="Paper")){      
         document.getElementById("result").innerHTML = "Player Wins! Rock beats Scissors.";
+        playerScore++;
     }
     else{
         
@@ -58,8 +64,19 @@ function go(){
     play(player,computer);
     document.getElementById("computer").innerHTML = "Computer selected: "+computer;
     console.log("Computer is "+computer);
+
+    
+    if (playerScore==3){
+        document.getElementById("winner").innerHTML = "Winner is Player";
+        playerScore=0;
+        computerScore=0;
+    }
+    if (computerScore==3){
+        document.getElementById("winner").innerHTML = "Winner is Computer";
+        playerScore=0;
+        computerScore=0;
+    }else{document.getElementById("winner").innerHTML = "";}
+    
 }
 
 
-
-}
